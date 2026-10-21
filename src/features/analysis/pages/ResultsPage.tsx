@@ -4,6 +4,7 @@ import { useAnalysis } from '../context/AnalysisContext';
 import { ScoreGauge } from '../components/ScoreGauge';
 import { FindingsAccordion } from '../components/FindingsAccordion';
 import { ActionableChecklist } from '../components/ActionableChecklist';
+import { FeedbackWidget } from '../components/FeedbackWidget';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, RotateCcw, Link2, Info } from 'lucide-react';
 
@@ -99,6 +100,12 @@ export const ResultsPage: React.FC = () => {
 
       {/* Remedial Action Checklist */}
       <ActionableChecklist result={currentResult} />
+
+      {/* Supabase Anonymous Feedback Telemetry */}
+      <FeedbackWidget
+        detectedCategory={currentResult.primaryCategory}
+        assignedScore={currentResult.score}
+      />
 
       {/* Mandatory Limitations Disclosure per PRD Section 7.2 */}
       <div className="border border-hairline rounded-lg p-5 bg-surface-1/40 space-y-2.5 text-xs text-ink-muted">
