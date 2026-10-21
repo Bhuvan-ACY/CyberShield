@@ -29,22 +29,22 @@ export const Footer: React.FC = () => {
             <h4 className="font-semibold text-ink-primary text-xs tracking-wider uppercase">Triage Platform</h4>
             <ul className="space-y-1.5">
               <li>
-                <Link to="/analyze" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/analyze" className="hover:text-ink-dark transition-colors">
                   Analyze Suspicious Message
                 </Link>
               </li>
               <li>
-                <Link to="/analyze" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/analyze" className="hover:text-ink-dark transition-colors">
                   Inspect URL Structure
                 </Link>
               </li>
               <li>
-                <Link to="/analyze" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/analyze" className="hover:text-ink-dark transition-colors">
                   App Metadata Evaluation
                 </Link>
               </li>
               <li>
-                <Link to="/training" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/training" className="hover:text-ink-dark transition-colors">
                   Scam Simulator & Quizzes
                 </Link>
               </li>
@@ -56,22 +56,22 @@ export const Footer: React.FC = () => {
             <h4 className="font-semibold text-ink-primary text-xs tracking-wider uppercase">Resources</h4>
             <ul className="space-y-1.5">
               <li>
-                <Link to="/awareness" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/awareness" className="hover:text-ink-dark transition-colors">
                   Threat Awareness Center
                 </Link>
               </li>
               <li>
-                <Link to="/safety-guide" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/safety-guide" className="hover:text-ink-dark transition-colors">
                   Victim Incident Response Checklist
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/about" className="hover:text-ink-dark transition-colors">
                   Scoring Methodology & Limits
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-ink-dark transition-colors">
+                <Link to="/app/about" className="hover:text-ink-dark transition-colors">
                   Zero-Retention Privacy Policy
                 </Link>
               </li>

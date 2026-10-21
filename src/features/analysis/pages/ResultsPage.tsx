@@ -22,7 +22,7 @@ export const ResultsPage: React.FC = () => {
         <p className="text-xs text-ink-muted max-w-sm leading-relaxed">
           You have not submitted a threat to analyze or the previous ephemeral result was cleared.
         </p>
-        <Link to="/analyze">
+        <Link to="/app/analyze">
           <Button variant="primary">
             <ArrowLeft className="h-4 w-4" />
             Start New Threat Triage
@@ -34,7 +34,7 @@ export const ResultsPage: React.FC = () => {
 
   const handleAnalyzeAnother = () => {
     clearAnalysis();
-    navigate('/analyze');
+    navigate('/app/analyze');
   };
 
   return (

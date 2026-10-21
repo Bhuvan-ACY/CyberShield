@@ -98,7 +98,7 @@ export const QuizSession: React.FC = () => {
                   <span className="text-ink-primary font-medium truncate max-w-sm">
                     Q{q.id}: {q.question}
                   </span>
-                  <Link to="/awareness" className="text-cobalt font-semibold hover:underline shrink-0 flex items-center gap-1">
+                  <Link to="/app/awareness" className="text-cobalt font-semibold hover:underline shrink-0 flex items-center gap-1">
                     Read Guide <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
@@ -113,7 +113,7 @@ export const QuizSession: React.FC = () => {
             Retake Quiz
           </Button>
 
-          <Link to="/awareness">
+          <Link to="/app/awareness">
             <Button variant="primary" size="md">
               Explore Threat Awareness
             </Button>

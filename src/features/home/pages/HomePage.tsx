@@ -22,14 +22,14 @@ export const HomePage: React.FC = () => {
   const handleQuickAnalyze = (e: React.FormEvent) => {
     e.preventDefault();
     if (!quickInput.trim()) {
-      navigate('/analyze');
+      navigate('/app/analyze');
       return;
     }
     analyze({
       type: 'message',
       messageText: quickInput.trim(),
     });
-    navigate('/analyze/results');
+    navigate('/app/analyze/results');
   };
 
   const threatDomains = [
@@ -39,7 +39,7 @@ export const HomePage: React.FC = () => {
       badgeVariant: 'critical' as const,
       description:
         'Syndicates impersonating CBI, ED, and Police demanding Skype video calls and funds transfer to "court clearance escrow".',
-      link: '/awareness',
+      link: '/app/awareness',
     },
     {
       title: 'Phishing & Credential Theft',
@@ -47,7 +47,7 @@ export const HomePage: React.FC = () => {
       badgeVariant: 'high' as const,
       description:
         'Deceptive SMS notifications alleging expired PAN/KYC or electricity power cutoffs designed to harvest passwords and OTPs.',
-      link: '/awareness',
+      link: '/app/awareness',
     },
     {
       title: 'Deceptive Lookalike URLs',
@@ -55,7 +55,7 @@ export const HomePage: React.FC = () => {
       badgeVariant: 'moderate' as const,
       description:
         'Typosquatting and deceptive subdomains masquerading as official government (.gov.in) and banking portals on mobile address bars.',
-      link: '/awareness',
+      link: '/app/awareness',
     },
     {
       title: 'Sideloaded App Permissions',
@@ -63,7 +63,7 @@ export const HomePage: React.FC = () => {
       badgeVariant: 'low' as const,
       description:
         'Untrusted APK downloads abusing Android Accessibility and SMS permissions to silently capture banking credentials.',
-      link: '/awareness',
+      link: '/app/awareness',
     },
   ];
 
@@ -105,17 +105,17 @@ export const HomePage: React.FC = () => {
 
         {/* Direct Action Links */}
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <Link to="/analyze">
+          <Link to="/app/analyze">
             <Button variant="outline" size="md" className="text-sm">
               Advanced Multi-Tab Analyzer
             </Button>
           </Link>
-          <Link to="/training">
+          <Link to="/app/training">
             <Button variant="outline" size="md" className="text-sm">
               Practice Scam Simulator
             </Button>
           </Link>
-          <Link to="/safety-guide">
+          <Link to="/app/safety-guide">
             <Button variant="secondary" size="md" className="text-error font-semibold text-sm">
               <PhoneCall className="h-4 w-4" />
               1930 Emergency Guide
@@ -139,7 +139,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <Link to="/awareness" className="shrink-0">
+          <Link to="/app/awareness" className="shrink-0">
             <Button variant="outline" size="sm" className="bg-canvas border-amber-300 text-sm font-semibold">
               Read Advisory
             </Button>

@@ -158,7 +158,7 @@ export const AwarenessPage: React.FC = () => {
                     {isExpanded ? 'Collapse Guide' : 'Read Full Guide'}
                   </Button>
 
-                  <Link to="/analyze">
+                  <Link to="/app/analyze">
                     <span className="text-xs font-semibold text-cobalt hover:underline inline-flex items-center gap-1">
                       Test in Analyzer <ArrowRight className="h-3 w-3" />
                     </span>
@@ -178,7 +178,7 @@ export const AwarenessPage: React.FC = () => {
             Take our 10-question cybersecurity hygiene quiz or test interactive scam scenarios.
           </p>
         </div>
-        <Link to="/training">
+        <Link to="/app/training">
           <Button variant="primary" size="sm" className="shrink-0">
             Start Cybersecurity Quiz
           </Button>

@@ -127,7 +127,7 @@ export const AnalysisForm: React.FC = () => {
       });
     }
 
-    navigate('/analyze/results');
+    navigate('/app/analyze/results');
   };
 
   const handleClear = () => {
