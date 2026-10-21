@@ -109,16 +109,16 @@ export const AwarenessPage: React.FC = () => {
                       <Badge variant="surface" size="sm">
                         {article.categoryLabel}
                       </Badge>
-                      <div className="flex items-center gap-1 text-[11px] text-ink-secondary">
-                        <Clock className="h-3 w-3" />
+                      <div className="flex items-center gap-1.5 text-xs text-ink-secondary">
+                        <Clock className="h-3.5 w-3.5" />
                         <span>{article.readTime}</span>
                       </div>
                     </div>
 
-                    <CardTitle className="text-base sm:text-lg leading-snug">
+                    <CardTitle className="text-lg sm:text-xl leading-snug">
                       {article.title}
                     </CardTitle>
-                    <CardDescription className="text-xs mt-1">
+                    <CardDescription className="text-sm mt-1.5">
                       {article.summary}
                     </CardDescription>
                   </CardHeader>
@@ -126,18 +126,18 @@ export const AwarenessPage: React.FC = () => {
                   <CardContent className="pt-0">
                     {/* Expanded Article Body */}
                     {isExpanded && (
-                      <div className="space-y-4 pt-4 border-t border-hairline mt-3 text-xs sm:text-sm text-ink-primary leading-relaxed">
+                      <div className="space-y-4 pt-4 border-t border-hairline mt-3 text-sm sm:text-base text-ink-primary leading-relaxed">
                         {article.content.map((paragraph, idx) => (
                           <p key={idx}>{paragraph}</p>
                         ))}
 
                         {/* Key Takeaways Callout */}
                         <div className="bg-surface-1 border border-hairline rounded-lg p-4 space-y-2">
-                          <div className="flex items-center gap-1.5 font-bold text-xs text-ink-dark uppercase tracking-wider">
-                            <ShieldCheck className="h-4 w-4 text-emerald-600" />
+                          <div className="flex items-center gap-1.5 font-bold text-sm text-ink-dark uppercase tracking-wider">
+                            <ShieldCheck className="h-4.5 w-4.5 text-emerald-600" />
                             Essential Citizen Takeaways
                           </div>
-                          <ul className="list-disc pl-4 space-y-1 text-xs text-ink-muted">
+                          <ul className="list-disc pl-4 space-y-1.5 text-sm text-ink-muted">
                             {article.keyTakeaways.map((point, idx) => (
                               <li key={idx}>{point}</li>
                             ))}

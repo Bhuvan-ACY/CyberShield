@@ -88,15 +88,15 @@ export const HomePage: React.FC = () => {
 
         {/* Quick Triage Bar */}
         <form onSubmit={handleQuickAnalyze} className="max-w-xl mx-auto pt-2">
-          <div className="flex flex-col sm:flex-row gap-2 border border-hairline rounded-lg p-2 bg-canvas shadow-flat hover:shadow-halo transition-shadow">
+          <div className="flex flex-col sm:flex-row gap-2 border border-hairline rounded-lg p-2.5 bg-canvas shadow-flat hover:shadow-halo transition-shadow">
             <input
               type="text"
               value={quickInput}
               onChange={(e) => setQuickInput(e.target.value)}
               placeholder="Paste suspicious SMS, link, or extortion threat..."
-              className="flex-1 px-3 py-2 text-sm text-ink-primary focus:outline-none placeholder:text-ink-faint"
+              className="flex-1 px-3 py-2.5 text-base text-ink-primary focus:outline-none placeholder:text-ink-faint"
             />
-            <Button type="submit" variant="primary" size="md" className="shrink-0">
+            <Button type="submit" variant="primary" size="md" className="shrink-0 text-sm font-semibold">
               <Search className="h-4 w-4" />
               Triage Now
             </Button>
@@ -106,18 +106,18 @@ export const HomePage: React.FC = () => {
         {/* Direct Action Links */}
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <Link to="/analyze">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="md" className="text-sm">
               Advanced Multi-Tab Analyzer
             </Button>
           </Link>
           <Link to="/training">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="md" className="text-sm">
               Practice Scam Simulator
             </Button>
           </Link>
           <Link to="/safety-guide">
-            <Button variant="secondary" size="sm" className="text-error font-semibold">
-              <PhoneCall className="h-3.5 w-3.5" />
+            <Button variant="secondary" size="md" className="text-error font-semibold text-sm">
+              <PhoneCall className="h-4 w-4" />
               1930 Emergency Guide
             </Button>
           </Link>
@@ -126,21 +126,21 @@ export const HomePage: React.FC = () => {
 
       {/* High-Priority Active Alert Banner */}
       <section className="max-w-4xl mx-auto">
-        <div className="border border-amber-300 bg-amber-50/60 rounded-lg p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-start gap-3">
+        <div className="border border-amber-300 bg-amber-50/60 rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3.5">
             <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
-            <div className="space-y-0.5">
-              <h4 className="text-xs font-bold text-amber-950 uppercase tracking-wider">
+            <div className="space-y-1">
+              <h4 className="text-sm font-bold text-amber-950 uppercase tracking-wider">
                 Active Citizen Scam Alert: Fake Police & CBI Video Calls
               </h4>
-              <p className="text-xs text-amber-900 leading-relaxed">
+              <p className="text-sm text-amber-900 leading-relaxed">
                 Extortionists are impersonating Indian law enforcement over WhatsApp/Skype video calls alleging narcotics parcels. Real police never issue warrants or hold video trials.
               </p>
             </div>
           </div>
 
           <Link to="/awareness" className="shrink-0">
-            <Button variant="outline" size="sm" className="bg-canvas border-amber-300 text-xs">
+            <Button variant="outline" size="sm" className="bg-canvas border-amber-300 text-sm font-semibold">
               Read Advisory
             </Button>
           </Link>
@@ -149,10 +149,10 @@ export const HomePage: React.FC = () => {
 
       {/* 4 Threat Domains Grid */}
       <section className="space-y-6 max-w-5xl mx-auto">
-        <div className="text-center space-y-1">
+        <div className="text-center space-y-1.5">
           <span className="code-chip">HEURISTIC COVERAGE</span>
-          <h2 className="text-2xl font-bold text-ink-primary">Core Threat Triage Vectors</h2>
-          <p className="text-xs text-ink-muted">
+          <h2 className="text-3xl font-bold text-ink-primary">Core Threat Triage Vectors</h2>
+          <p className="text-sm text-ink-muted">
             Engineered specifically to counter high-prevalence social engineering targeting Indian citizens.
           </p>
         </div>
@@ -167,16 +167,16 @@ export const HomePage: React.FC = () => {
                       {domain.badge}
                     </Badge>
                   </div>
-                  <CardTitle className="text-base">{domain.title}</CardTitle>
+                  <CardTitle className="text-lg font-bold">{domain.title}</CardTitle>
                 </CardHeader>
-                <CardDescription className="text-xs text-ink-muted leading-relaxed px-5">
+                <CardDescription className="text-sm text-ink-muted leading-relaxed px-5">
                   {domain.description}
                 </CardDescription>
               </div>
 
               <div className="pt-4 border-t border-surface-1 px-5 mt-4">
-                <Link to={domain.link} className="text-xs font-semibold text-cobalt hover:underline inline-flex items-center gap-1">
-                  Learn Protection Strategies <ArrowRight className="h-3 w-3" />
+                <Link to={domain.link} className="text-sm font-semibold text-cobalt hover:underline inline-flex items-center gap-1.5">
+                  Learn Protection Strategies <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </Card>

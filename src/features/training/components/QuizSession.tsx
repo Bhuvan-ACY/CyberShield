@@ -129,20 +129,20 @@ export const QuizSession: React.FC = () => {
     <Card className="max-w-2xl mx-auto shadow-flat border-hairline space-y-6">
       {/* Progress header */}
       <CardHeader className="pb-3 border-none">
-        <div className="flex items-center justify-between text-xs text-ink-secondary mb-2">
+        <div className="flex items-center justify-between text-sm text-ink-secondary mb-2">
           <span className="code-chip">Question {currentIndex + 1} of {QUIZ_QUESTIONS.length}</span>
           <span>Score: {correctCount} correct</span>
         </div>
 
         {/* Progress bar */}
-        <div className="w-full bg-surface-1 h-1.5 rounded-full overflow-hidden">
+        <div className="w-full bg-surface-1 h-2 rounded-full overflow-hidden">
           <div
             className="bg-ink-dark h-full transition-all duration-300"
             style={{ width: `${((currentIndex + 1) / QUIZ_QUESTIONS.length) * 100}%` }}
           />
         </div>
 
-        <CardTitle className="text-base sm:text-lg leading-snug pt-3">
+        <CardTitle className="text-lg sm:text-xl font-bold leading-snug pt-3">
           {question.question}
         </CardTitle>
       </CardHeader>
@@ -172,9 +172,9 @@ export const QuizSession: React.FC = () => {
                 type="button"
                 onClick={() => handleSelectOption(idx)}
                 disabled={isAnswerSubmitted}
-                className={`w-full text-left p-3.5 rounded-lg border text-xs sm:text-sm transition-all flex items-start gap-3 ${optionStyles}`}
+                className={`w-full text-left p-3.5 rounded-lg border text-sm sm:text-base transition-all flex items-start gap-3 ${optionStyles}`}
               >
-                <span className="font-mono text-xs font-bold text-ink-secondary mt-0.5 shrink-0">
+                <span className="font-mono text-sm font-bold text-ink-secondary mt-0.5 shrink-0">
                   {String.fromCharCode(65 + idx)}.
                 </span>
                 <span className="flex-1 leading-relaxed">{option}</span>

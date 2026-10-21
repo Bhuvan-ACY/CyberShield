@@ -72,13 +72,13 @@ export const ResultsPage: React.FC = () => {
             {currentResult.extractedUrls.map((url, i) => (
               <div
                 key={i}
-                className="bg-surface-1 border border-hairline rounded px-3 py-2 text-xs font-mono text-ink-dark overflow-x-auto select-all"
+                className="bg-surface-1 border border-hairline rounded px-3 py-2 text-sm font-mono text-ink-dark overflow-x-auto select-all"
               >
                 {url}
               </div>
             ))}
           </div>
-          <p className="text-[11px] text-ink-muted">
+          <p className="text-xs text-ink-muted">
             Analyzed for lookalike patterns and port anomalies. CyberShield does not establish network connections to these destinations.
           </p>
         </div>
@@ -87,10 +87,10 @@ export const ResultsPage: React.FC = () => {
       {/* Findings Breakdown */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h3 className="font-bold text-base text-ink-primary">
+          <h3 className="font-bold text-lg text-ink-primary">
             Triggered Heuristic Indicators ({currentResult.findings.length})
           </h3>
-          <span className="text-xs text-ink-secondary">
+          <span className="text-sm text-ink-secondary">
             Context multiplier applied: {currentResult.contextMultiplier}x
           </span>
         </div>

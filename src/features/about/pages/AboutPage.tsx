@@ -39,15 +39,15 @@ export const AboutPage: React.FC = () => {
           </p>
         </CardHeader>
 
-        <CardContent className="space-y-4 pt-0 text-xs sm:text-sm text-ink-primary leading-relaxed">
-          <div className="bg-surface-1/60 border border-hairline rounded-lg p-4 font-mono text-xs text-ink-dark">
+        <CardContent className="space-y-4 pt-0 text-sm sm:text-base text-ink-primary leading-relaxed">
+          <div className="bg-surface-1/60 border border-hairline rounded-lg p-4 font-mono text-sm sm:text-base text-ink-dark">
             S = min(100, max(0, round(( &Sigma; w_i ) &times; C_context )))
           </div>
 
           <p>
             Where:
           </p>
-          <ul className="list-disc pl-5 space-y-1 text-xs text-ink-muted">
+          <ul className="list-disc pl-5 space-y-1.5 text-sm text-ink-muted">
             <li><strong>w_i:</strong> The static calibrated weight (5 to 40) assigned to the i-th deduplicated triggered rule.</li>
             <li><strong>C_context:</strong> The contextual multiplier (0.4 for educational/advisory text, 1.15 for compounding multi-category extortion, 1.0 baseline).</li>
             <li><strong>Deduplication:</strong> Repeating instances of the same keyword do not inflate the score. If rules share the exact same text span, only the highest-weight indicator fires.</li>
@@ -55,28 +55,28 @@ export const AboutPage: React.FC = () => {
 
           {/* Classification Tiers Table */}
           <div className="pt-2">
-            <span className="font-semibold text-xs text-ink-primary uppercase tracking-wider block mb-2">
+            <span className="font-semibold text-sm text-ink-primary uppercase tracking-wider block mb-2">
               Qualitative Risk Classification Tiers
             </span>
             <div className="border border-hairline rounded-lg overflow-hidden">
-              <table className="w-full text-left text-xs">
+              <table className="w-full text-left text-sm">
                 <thead className="bg-surface-1 border-b border-hairline font-semibold text-ink-primary">
                   <tr>
-                    <th className="p-2.5">Score Range</th>
-                    <th className="p-2.5">Classification</th>
-                    <th className="p-2.5">Operational Meaning</th>
+                    <th className="p-3">Score Range</th>
+                    <th className="p-3">Classification</th>
+                    <th className="p-3">Operational Meaning</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-hairline">
                   {scoringTiers.map((t, idx) => (
                     <tr key={idx} className="hover:bg-surface-1/20">
-                      <td className="p-2.5 font-mono font-medium">{t.range}</td>
-                      <td className="p-2.5">
-                        <Badge variant={t.variant} size="sm">
+                      <td className="p-3 font-mono font-medium">{t.range}</td>
+                      <td className="p-3">
+                        <Badge variant={t.variant} size="md">
                           {t.tier}
                         </Badge>
                       </td>
-                      <td className="p-2.5 text-ink-muted">{t.meaning}</td>
+                      <td className="p-3 text-ink-muted">{t.meaning}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -91,18 +91,18 @@ export const AboutPage: React.FC = () => {
         <CardHeader className="pb-3 border-none">
           <div className="flex items-center gap-2">
             <Lock className="h-5 w-5 text-emerald-600" />
-            <CardTitle className="text-lg">Zero-Retention Privacy Manifesto</CardTitle>
+            <CardTitle className="text-xl">Zero-Retention Privacy Manifesto</CardTitle>
           </div>
-          <p className="text-xs text-ink-muted">
+          <p className="text-sm text-ink-muted">
             How we protect digital citizens under extreme stress without collecting sensitive personal data.
           </p>
         </CardHeader>
 
-        <CardContent className="space-y-3 pt-0 text-xs sm:text-sm text-ink-muted leading-relaxed">
+        <CardContent className="space-y-3 pt-0 text-sm sm:text-base text-ink-muted leading-relaxed">
           <p>
             When citizens face active cyber extortion or suspicious messages, they may unintentionally input sensitive credentials, personal phone numbers, or private communications. CyberShield is architected specifically to guarantee zero surveillance:
           </p>
-          <ul className="list-disc pl-5 space-y-1.5 text-xs">
+          <ul className="list-disc pl-5 space-y-2 text-sm">
             <li><strong>Zero Database Logging:</strong> Your submitted text, links, and metadata are held strictly in temporary browser memory. Nothing is written to cloud storage or relational tables.</li>
             <li><strong>No Third-Party AI / LLM APIs:</strong> We do not dispatch your personal messages to commercial AI APIs or remote intelligence providers.</li>
             <li><strong>No Tracking / Marketing Pixels:</strong> We employ zero advertising trackers, behavioral cookies, or session recorders.</li>
@@ -115,18 +115,18 @@ export const AboutPage: React.FC = () => {
         <CardHeader className="pb-3 border-none">
           <div className="flex items-center gap-2">
             <AlertTriangle className="h-5 w-5 text-amber-500" />
-            <CardTitle className="text-lg">Engineering & Detection Limitations</CardTitle>
+            <CardTitle className="text-xl">Engineering & Detection Limitations</CardTitle>
           </div>
-          <p className="text-xs text-ink-muted">
+          <p className="text-sm text-ink-muted">
             Responsible cybersecurity disclosure: what the Enhanced MVP can and cannot do.
           </p>
         </CardHeader>
 
-        <CardContent className="space-y-3 pt-0 text-xs text-ink-muted leading-relaxed">
+        <CardContent className="space-y-3 pt-0 text-sm sm:text-base text-ink-muted leading-relaxed">
           <p>
             While CyberShield achieves high precision on known scam templates and structural URL anomalies, users must be aware of its boundaries:
           </p>
-          <ul className="list-disc pl-5 space-y-1.5">
+          <ul className="list-disc pl-5 space-y-2 text-sm">
             <li><strong>Zero Network Resolution (SSRF Defense):</strong> To protect you from malicious server exploits, we never establish network connections to submitted links. Therefore, cloaked multi-hop redirects or dynamic HTML payloads cannot be inspected.</li>
             <li><strong>Metadata Analysis Only:</strong> Mobile app assessment evaluates declared permissions and distribution sources. It does not perform binary reverse-engineering or APK bytecode disassembly.</li>
             <li><strong>Absence of Threat is Not Proof of Safety:</strong> Sophisticated spear-phishing or zero-day tactics may bypass heuristic regex patterns. Always verify critical requests directly through trusted, verified channels.</li>

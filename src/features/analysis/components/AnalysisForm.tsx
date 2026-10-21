@@ -181,10 +181,10 @@ export const AnalysisForm: React.FC = () => {
         {activeTab === 'message' && (
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <label htmlFor="message-input" className="text-xs font-semibold text-ink-primary uppercase tracking-wider">
+              <label htmlFor="message-input" className="text-sm font-semibold text-ink-primary uppercase tracking-wider">
                 Paste SMS, WhatsApp, or Email Text
               </label>
-              <span className={`text-[11px] ${messageText.length > 5000 ? 'text-error font-bold' : 'text-ink-secondary'}`}>
+              <span className={`text-xs font-mono ${messageText.length > 5000 ? 'text-error font-bold' : 'text-ink-secondary'}`}>
                 {messageText.length} / 5,000 characters
               </span>
             </div>
@@ -194,11 +194,11 @@ export const AnalysisForm: React.FC = () => {
               value={messageText}
               onChange={(e) => setMessageText(e.target.value)}
               placeholder="Paste suspected phishing message, digital arrest summons, or prize notification here... (e.g. 'URGENT: Your bank account will be blocked today...')"
-              className="font-sans text-sm"
+              className="font-sans text-base"
             />
 
-            <div className="flex items-center gap-2 text-xs text-ink-secondary">
-              <Lock className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+            <div className="flex items-center gap-2 text-sm text-ink-secondary">
+              <Lock className="h-4 w-4 text-emerald-600 shrink-0" />
               <span>Zero-knowledge client analysis: Raw message text is processed in-memory and never sent to remote servers or saved.</span>
             </div>
           </div>

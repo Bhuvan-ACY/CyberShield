@@ -32,9 +32,9 @@ export const Header: React.FC = () => {
         </span>
         <a
           href="tel:1930"
-          className="ml-2 inline-flex items-center gap-1 bg-amber-400 text-ink-dark px-2 py-0.5 rounded text-[11px] font-bold hover:bg-amber-300 transition-colors"
+          className="ml-2 inline-flex items-center gap-1 bg-amber-400 text-ink-dark px-2.5 py-0.5 rounded text-xs font-bold hover:bg-amber-300 transition-colors"
         >
-          <PhoneCall className="h-3 w-3" />
+          <PhoneCall className="h-3.5 w-3.5" />
           Call 1930
         </a>
       </div>
@@ -48,10 +48,10 @@ export const Header: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-base tracking-tight text-ink-dark">CyberShield</span>
+                <span className="font-bold text-lg tracking-tight text-ink-dark">CyberShield</span>
                 <span className="code-chip">MVP</span>
               </div>
-              <p className="text-[10px] text-ink-secondary leading-none hidden sm:block">
+              <p className="text-xs text-ink-secondary leading-tight hidden sm:block">
                 Citizen Threat Triage & Incident Escalation
               </p>
             </div>

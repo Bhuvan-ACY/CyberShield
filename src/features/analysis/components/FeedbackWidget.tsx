@@ -52,10 +52,10 @@ export const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({
     <div className="border border-hairline rounded-lg p-5 bg-canvas space-y-3 shadow-flat">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h4 className="text-xs font-bold text-ink-primary uppercase tracking-wider">
+          <h4 className="text-sm font-bold text-ink-primary uppercase tracking-wider">
             Was this threat assessment helpful?
           </h4>
-          <p className="text-[11px] text-ink-muted">
+          <p className="text-xs text-ink-muted">
             Telemetry is strictly anonymized and contains no submitted message text.
           </p>
         </div>

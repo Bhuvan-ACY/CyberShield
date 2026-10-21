@@ -111,11 +111,11 @@ export const SafetyGuidePage: React.FC = () => {
                       </h4>
                     </div>
 
-                    <p className="text-xs text-ink-muted leading-relaxed">
+                    <p className="text-sm text-ink-muted leading-relaxed">
                       {step.description}
                     </p>
 
-                    <div className="text-[11px] font-medium text-cobalt bg-surface-1/60 rounded px-2.5 py-1 inline-block">
+                    <div className="text-xs font-semibold text-cobalt bg-surface-1/60 rounded px-2.5 py-1 inline-block">
                       {step.actionLabel}
                     </div>
                   </div>
@@ -177,14 +177,14 @@ export const SafetyGuidePage: React.FC = () => {
                       {resource.badge}
                     </Badge>
                   </div>
-                  <CardTitle className="text-base leading-snug">{resource.name}</CardTitle>
-                  <p className="text-[11px] font-medium text-ink-secondary mt-0.5">
+                  <CardTitle className="text-lg leading-snug">{resource.name}</CardTitle>
+                  <p className="text-xs font-semibold text-ink-secondary mt-0.5">
                     {resource.authority}
                   </p>
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <p className="text-xs text-ink-muted leading-relaxed">
+                  <p className="text-sm text-ink-muted leading-relaxed">
                     {resource.purpose}
                   </p>
                 </CardContent>

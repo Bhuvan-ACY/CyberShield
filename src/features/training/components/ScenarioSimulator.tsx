@@ -72,8 +72,8 @@ export const ScenarioSimulator: React.FC = () => {
             <span className="code-chip">{scenario.messageCard.channel} Simulation</span>
           </div>
 
-          <CardTitle className="text-lg">{scenario.title}</CardTitle>
-          <CardDescription className="text-xs">
+          <CardTitle className="text-xl sm:text-2xl">{scenario.title}</CardTitle>
+          <CardDescription className="text-sm">
             Inspect the simulated message card below. Tap the highlighted threat hotspots or determine whether this communication is a scam.
           </CardDescription>
         </CardHeader>
@@ -82,16 +82,16 @@ export const ScenarioSimulator: React.FC = () => {
           {/* Simulated Mobile Message Screen */}
           <div className="max-w-lg mx-auto bg-surface-1/40 rounded-xl border-2 border-hairline p-4 sm:p-5 space-y-3 font-sans shadow-sm">
             {/* Header info */}
-            <div className="flex items-center justify-between text-xs text-ink-secondary border-b border-hairline pb-2">
+            <div className="flex items-center justify-between text-sm text-ink-secondary border-b border-hairline pb-2">
               <div className="flex items-center gap-1.5 font-medium text-ink-dark">
-                <Smartphone className="h-3.5 w-3.5" />
+                <Smartphone className="h-4 w-4" />
                 <span>{scenario.messageCard.sender}</span>
               </div>
               <span>{scenario.messageCard.timestamp}</span>
             </div>
 
             {/* Message bubble */}
-            <div className="bg-canvas border border-hairline rounded-lg p-4 text-xs sm:text-sm text-ink-primary leading-relaxed shadow-sm">
+            <div className="bg-canvas border border-hairline rounded-lg p-4 text-sm sm:text-base text-ink-primary leading-relaxed shadow-sm">
               <p className="whitespace-pre-wrap">{scenario.messageCard.body}</p>
             </div>
           </div>
@@ -99,11 +99,11 @@ export const ScenarioSimulator: React.FC = () => {
           {/* Interactive Hotspot Inspector */}
           <div className="space-y-3 pt-2">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-ink-primary uppercase tracking-wider flex items-center gap-1.5">
+              <span className="text-sm font-bold text-ink-primary uppercase tracking-wider flex items-center gap-1.5">
                 <Info className="h-4 w-4 text-cobalt" />
                 Inspect Warning Signs & Hotspots ({scenario.hotspots.length})
               </span>
-              <span className="text-[11px] text-ink-secondary">Tap any sign to reveal forensic breakdown</span>
+              <span className="text-xs text-ink-secondary">Tap any sign to reveal forensic breakdown</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -120,18 +120,18 @@ export const ScenarioSimulator: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between gap-1 mb-1">
-                      <span className="font-semibold text-xs text-ink-primary truncate">
+                      <span className="font-semibold text-sm text-ink-primary truncate">
                         {hs.title}
                       </span>
-                      <span className="code-chip text-[9px]">{isRevealed ? 'Hide' : 'Inspect'}</span>
+                      <span className="code-chip text-xs">{isRevealed ? 'Hide' : 'Inspect'}</span>
                     </div>
 
                     {isRevealed ? (
-                      <p className="text-[11px] text-ink-muted leading-relaxed mt-1">
+                      <p className="text-xs text-ink-muted leading-relaxed mt-1">
                         {hs.explanation}
                       </p>
                     ) : (
-                      <p className="text-[11px] text-ink-secondary italic truncate">
+                      <p className="text-xs text-ink-secondary italic truncate">
                         "{hs.textExcerpt}"
                       </p>
                     )}

@@ -60,28 +60,28 @@ export const FindingsAccordion: React.FC<FindingsAccordionProps> = ({ findings }
           <div className="space-y-3">
             {/* Matched Evidence quote */}
             <div>
-              <span className="text-[11px] font-semibold text-ink-primary uppercase tracking-wider block mb-1">
+              <span className="text-xs font-semibold text-ink-primary uppercase tracking-wider block mb-1">
                 Matched Evidence Excerpt
               </span>
-              <div className="bg-canvas border border-hairline rounded p-2.5 font-mono text-xs text-ink-dark overflow-x-auto select-all">
+              <div className="bg-canvas border border-hairline rounded p-2.5 font-mono text-sm text-ink-dark overflow-x-auto select-all">
                 "{finding.matchedEvidence}"
               </div>
             </div>
 
             {/* Explanation */}
             <div>
-              <span className="text-[11px] font-semibold text-ink-primary uppercase tracking-wider block mb-0.5">
+              <span className="text-xs font-semibold text-ink-primary uppercase tracking-wider block mb-0.5">
                 Threat Analysis
               </span>
-              <p className="text-xs text-ink-muted leading-relaxed">{finding.explanation}</p>
+              <p className="text-sm text-ink-muted leading-relaxed">{finding.explanation}</p>
             </div>
 
             {/* Recommendation */}
-            <div className="bg-surface-1 border border-hairline rounded p-2.5">
-              <span className="text-[11px] font-bold text-ink-dark block mb-0.5">
+            <div className="bg-surface-1 border border-hairline rounded p-3">
+              <span className="text-xs font-bold text-ink-dark block mb-0.5">
                 Recommended Action:
               </span>
-              <p className="text-xs text-ink-primary leading-relaxed">{finding.recommendation}</p>
+              <p className="text-sm text-ink-primary leading-relaxed">{finding.recommendation}</p>
             </div>
           </div>
         </AccordionItem>

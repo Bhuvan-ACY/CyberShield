@@ -88,10 +88,10 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({
 
         {/* Inner Score Display */}
         <div className="absolute flex flex-col items-center justify-center text-center">
-          <span className="text-4xl font-extrabold tracking-tight text-ink-dark">
+          <span className="text-5xl font-extrabold tracking-tight text-ink-dark">
             {isInconclusive ? '—' : score}
           </span>
-          <span className="text-[11px] font-semibold text-ink-muted uppercase tracking-wider">
+          <span className="text-xs font-semibold text-ink-muted uppercase tracking-wider">
             out of 100
           </span>
         </div>
@@ -112,7 +112,7 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({
           <span className="code-chip">Score: {score}/100</span>
         </div>
 
-        <h2 className="text-xl font-bold tracking-tight text-ink-primary leading-snug">
+        <h2 className="text-2xl font-bold tracking-tight text-ink-primary leading-snug">
           {headline}
         </h2>
 
