@@ -69,14 +69,9 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="space-y-16 py-4">
-      {/* Hero Section with Documentation-Native Stacked Emoji Motif */}
-      <section className="text-center max-w-3xl mx-auto space-y-6 pt-4">
-        {/* Drizzle ORM / Doc Native Stacked Water Drop Emoji Motif */}
-        <div className="text-2xl sm:text-3xl select-none tracking-widest" aria-hidden="true">
-          💧💧💧
-        </div>
-
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-1 border border-hairline text-xs font-semibold text-ink-primary">
+      {/* Hero Section */}
+      <section className="text-center max-w-3xl mx-auto space-y-6 pt-4 sm:pt-8">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-1 border border-hairline text-xs font-semibold text-ink-primary shadow-flat">
           <Shield className="h-3.5 w-3.5 text-ink-dark" />
           <span>CYBERSHIELD ENHANCED MVP</span>
           <span className="text-ink-faint">|</span>

@@ -34,7 +34,7 @@
 
 | Route | Page | Primary Responsibilities |
 | :--- | :--- | :--- |
-| `/` | **Home / Dashboard** | Hero with stacked emoji motif (`💧💧💧`), rapid triage input bar, active scam advisory banner, core threat domain cards. |
+| `/` | **Home / Dashboard** | Hero with security status badge, rapid triage input bar, active scam advisory banner, core threat domain cards. |
 | `/analyze` | **Analyze Threats** | 3-tab analysis form (Message text, Standalone URL, App Metadata), sample scenario loader, live validation. |
 | `/analyze/results` | **Analysis Results** | Animated SVG radial score gauge (0–100), classification badge, findings accordion with quotes, actionable checklist, 1-click plain text summary copy. |
 | `/awareness` | **Threat Awareness Center** | Searchable and category-filtered educational guides with key takeaways and read times. |
