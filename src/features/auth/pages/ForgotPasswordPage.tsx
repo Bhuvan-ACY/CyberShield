@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Alert } from '@/components/ui/Alert';
 import { useAuth } from '../context/AuthContext';
+import { ThemeToggle } from '@/features/theme';
 
 export const ForgotPasswordPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -44,7 +45,7 @@ export const ForgotPasswordPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 bg-surface-1/30">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <Link
             to="/login"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted hover:text-ink-dark transition-colors"
@@ -52,6 +53,7 @@ export const ForgotPasswordPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
             Back to Sign In
           </Link>
+          <ThemeToggle size="sm" />
         </div>
 
         <div className="text-center">
@@ -59,15 +61,7 @@ export const ForgotPasswordPage: React.FC = () => {
             <div className="h-10 w-10 rounded-lg bg-ink-dark text-canvas flex items-center justify-center transition-transform group-hover:scale-105">
               <Shield className="h-6 w-6" />
             </div>
-            <div className="text-left">
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-xl tracking-tight text-ink-dark">CyberShield</span>
-                <span className="code-chip">MVP</span>
-              </div>
-              <p className="text-xs text-ink-secondary leading-tight">
-                Citizen Threat Triage & Incident Escalation
-              </p>
-            </div>
+            <span className="font-bold text-xl tracking-tight text-ink-dark">CyberShield</span>
           </Link>
 
           <h2 className="mt-6 text-2xl sm:text-3xl font-extrabold text-ink-dark tracking-tight">

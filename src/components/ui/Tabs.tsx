@@ -16,7 +16,7 @@ export interface TabsProps {
 
 export const Tabs: React.FC<TabsProps> = ({ items, activeTab, onChange, className }) => {
   return (
-    <div className={cn('flex border-b border-hairline overflow-x-auto no-scrollbar', className)}>
+    <div className={cn('flex border-b border-hairline overflow-x-auto no-scrollbar touch-pan-x scroll-smooth', className)}>
       {items.map((tab) => {
         const isActive = tab.id === activeTab;
         return (
@@ -25,7 +25,7 @@ export const Tabs: React.FC<TabsProps> = ({ items, activeTab, onChange, classNam
             type="button"
             onClick={() => onChange(tab.id)}
             className={cn(
-              'flex items-center gap-2 py-2.5 px-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap',
+              'flex items-center gap-2 py-3 px-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap shrink-0 min-h-[44px]',
               isActive
                 ? 'border-ink-dark text-ink-dark font-semibold'
                 : 'border-transparent text-ink-muted hover:text-ink-primary hover:border-hairline'

@@ -16,9 +16,9 @@ export const Alert: React.FC<AlertProps> = ({
 }) => {
   const variantStyles = {
     info: 'bg-surface-1 border-hairline text-ink-primary',
-    warning: 'bg-amber-50 border-amber-200 text-amber-900',
-    error: 'bg-error-container/40 border-error/30 text-error-on',
-    success: 'bg-emerald-50 border-emerald-200 text-emerald-900',
+    warning: 'bg-amber-50 border-amber-200 text-amber-900 dark:bg-amber-950/40 dark:border-amber-800 dark:text-amber-200',
+    error: 'bg-error-container/40 border-error/30 text-error-on dark:bg-red-950/40 dark:border-red-800 dark:text-red-200',
+    success: 'bg-emerald-50 border-emerald-200 text-emerald-900 dark:bg-emerald-950/40 dark:border-emerald-800 dark:text-emerald-200',
   };
 
   const icons = {

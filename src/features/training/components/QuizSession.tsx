@@ -93,12 +93,12 @@ export const QuizSession: React.FC = () => {
               {missedQuestions.map((q) => (
                 <div
                   key={q.id}
-                  className="p-2.5 rounded bg-canvas border border-hairline flex items-center justify-between text-xs"
+                  className="p-2.5 rounded bg-canvas border border-hairline flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
                 >
-                  <span className="text-ink-primary font-medium truncate max-w-sm">
+                  <span className="text-ink-primary font-medium truncate max-w-full sm:max-w-sm">
                     Q{q.id}: {q.question}
                   </span>
-                  <Link to="/app/awareness" className="text-cobalt font-semibold hover:underline shrink-0 flex items-center gap-1">
+                  <Link to="/app/awareness" className="text-cobalt font-semibold hover:underline shrink-0 flex items-center gap-1 self-start sm:self-auto">
                     Read Guide <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
@@ -107,14 +107,14 @@ export const QuizSession: React.FC = () => {
           </div>
         )}
 
-        <div className="flex justify-center gap-3 pt-4 border-t border-hairline">
-          <Button variant="outline" size="md" onClick={handleReset}>
+        <div className="flex flex-col sm:flex-row justify-center gap-3 pt-4 border-t border-hairline">
+          <Button variant="outline" size="md" onClick={handleReset} className="w-full sm:w-auto min-h-[44px]">
             <RotateCcw className="h-4 w-4" />
             Retake Quiz
           </Button>
 
-          <Link to="/app/awareness">
-            <Button variant="primary" size="md">
+          <Link to="/app/awareness" className="w-full sm:w-auto">
+            <Button variant="primary" size="md" className="w-full min-h-[44px]">
               Explore Threat Awareness
             </Button>
           </Link>
@@ -156,9 +156,9 @@ export const QuizSession: React.FC = () => {
 
             if (isAnswerSubmitted) {
               if (idx === question.correctIndex) {
-                optionStyles = 'border-emerald-500 bg-emerald-50 text-emerald-950 font-semibold';
+                optionStyles = 'border-emerald-500 bg-emerald-50 text-emerald-950 dark:bg-emerald-950/50 dark:border-emerald-700 dark:text-emerald-200 font-semibold';
               } else if (isSelected && !isCurrentCorrect) {
-                optionStyles = 'border-red-400 bg-red-50 text-red-950';
+                optionStyles = 'border-red-400 bg-red-50 text-red-950 dark:bg-red-950/50 dark:border-red-700 dark:text-red-200';
               } else {
                 optionStyles = 'border-hairline bg-canvas opacity-50 text-ink-faint';
               }

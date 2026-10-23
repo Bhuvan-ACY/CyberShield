@@ -66,7 +66,7 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({
             cx="85"
             cy="85"
             r={radius}
-            stroke="#e8e8e8"
+            stroke="var(--color-surface-1)"
             strokeWidth={strokeWidth}
             fill="transparent"
           />

@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 /**
- * Initializes smooth momentum scrolling via Lenis.
+ * Initializes smooth momentum scrolling via Lenis and binds it with GSAP ScrollTrigger.
  * Automatically respects user's prefers-reduced-motion preference.
  */
 export function useLenisScroll(): void {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    // Check user preference for reduced motion
+    // Respect user preference for reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       return;
@@ -24,6 +25,9 @@ export function useLenisScroll(): void {
     });
 
     lenisRef.current = lenis;
+
+    // Connect Lenis scroll events to GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
 
     function raf(time: number) {
       lenis.raf(time);

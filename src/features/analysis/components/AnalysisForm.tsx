@@ -155,7 +155,7 @@ export const AnalysisForm: React.FC = () => {
             if (e.target.value) handleSelectSample(e.target.value);
           }}
           defaultValue=""
-          className="text-xs bg-surface-1 border border-hairline rounded-lg px-3 py-1.5 text-ink-primary focus:outline-none focus:ring-1 focus:ring-ink-dark"
+          className="w-full sm:w-auto min-h-[38px] text-xs bg-surface-1 border border-hairline rounded-lg px-3 py-1.5 text-ink-primary focus:outline-none focus:ring-1 focus:ring-ink-dark"
         >
           <option value="" disabled>
             Select a sample incident...
@@ -285,12 +285,12 @@ export const AnalysisForm: React.FC = () => {
         )}
 
         {/* Buttons */}
-        <div className="flex items-center justify-between pt-4 border-t border-hairline">
-          <Button type="button" variant="ghost" size="sm" onClick={handleClear}>
+        <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t border-hairline">
+          <Button type="button" variant="ghost" size="sm" onClick={handleClear} className="w-full sm:w-auto min-h-[44px]">
             Clear Form
           </Button>
 
-          <Button type="submit" variant="primary" size="md" isLoading={isAnalyzing}>
+          <Button type="submit" variant="primary" size="md" isLoading={isAnalyzing} className="w-full sm:w-auto min-h-[44px]">
             <Shield className="h-4 w-4" />
             Analyze Threat Heuristics
           </Button>

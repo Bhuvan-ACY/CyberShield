@@ -58,8 +58,8 @@ export const AboutPage: React.FC = () => {
             <span className="font-semibold text-sm text-ink-primary uppercase tracking-wider block mb-2">
               Qualitative Risk Classification Tiers
             </span>
-            <div className="border border-hairline rounded-lg overflow-hidden">
-              <table className="w-full text-left text-sm">
+            <div className="border border-hairline rounded-lg overflow-x-auto touch-pan-x">
+              <table className="w-full min-w-[500px] text-left text-sm">
                 <thead className="bg-surface-1 border-b border-hairline font-semibold text-ink-primary">
                   <tr>
                     <th className="p-3">Score Range</th>

@@ -27,7 +27,7 @@ export const SafetyGuidePage: React.FC = () => {
     <div className="space-y-12 max-w-5xl mx-auto">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-3">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-50 border border-red-200 text-xs font-semibold text-error">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 text-xs font-semibold text-error">
           <ShieldAlert className="h-3.5 w-3.5 text-error" />
           <span>Emergency Incident Escalation</span>
         </div>
@@ -40,20 +40,20 @@ export const SafetyGuidePage: React.FC = () => {
       </div>
 
       {/* Emergency Callout Card: 1930 */}
-      <div className="border-2 border-error/80 bg-red-50/50 rounded-lg p-6 sm:p-8 space-y-4">
+      <div className="border-2 border-error/80 bg-red-50/50 dark:bg-red-950/20 rounded-lg p-6 sm:p-8 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="space-y-1">
             <span className="code-chip bg-error text-canvas">CRITICAL EMERGENCY</span>
             <h2 className="text-xl sm:text-2xl font-bold text-ink-dark">
               National Cyber Crime Helpline: 1930
             </h2>
-            <p className="text-xs sm:text-sm text-ink-muted max-w-xl">
+            <p className="text-xs sm:text-sm text-ink-muted max-w-xl leading-relaxed">
               Operated by the Indian Cyber Crime Coordination Centre (I4C), MHA. Dial 1930 immediately to block and freeze fraudulent transactions across Indian banks before the money leaves the financial system.
             </p>
           </div>
 
-          <a href="tel:1930" className="shrink-0">
-            <Button variant="danger" size="lg" className="w-full sm:w-auto shadow-md">
+          <a href="tel:1930" className="shrink-0 w-full sm:w-auto">
+            <Button variant="danger" size="lg" className="w-full sm:w-auto shadow-md min-h-[44px]">
               <PhoneCall className="h-5 w-5" />
               Dial 1930 (Free Hotline)
             </Button>

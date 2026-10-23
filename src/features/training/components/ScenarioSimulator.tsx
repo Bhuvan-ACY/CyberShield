@@ -148,12 +148,12 @@ export const ScenarioSimulator: React.FC = () => {
             </h4>
 
             {!isAnswered ? (
-              <div className="flex justify-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
                 <Button
                   variant="outline"
                   size="md"
                   onClick={() => setUserGuess('safe')}
-                  className="w-36 hover:border-emerald-500"
+                  className="w-full sm:w-36 hover:border-emerald-500 min-h-[44px]"
                 >
                   <ShieldCheck className="h-4 w-4 text-emerald-600" />
                   It's Safe
@@ -163,7 +163,7 @@ export const ScenarioSimulator: React.FC = () => {
                   variant="danger"
                   size="md"
                   onClick={() => setUserGuess('scam')}
-                  className="w-36"
+                  className="w-full sm:w-36 min-h-[44px]"
                 >
                   <ShieldAlert className="h-4 w-4" />
                   It's a Scam!

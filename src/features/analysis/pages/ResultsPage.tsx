@@ -63,7 +63,7 @@ export const ResultsPage: React.FC = () => {
 
       {/* Extracted URLs Section if any */}
       {currentResult.extractedUrls.length > 0 && (
-        <div className="border border-hairline rounded-lg p-5 bg-canvas space-y-3">
+        <div className="border border-hairline rounded-lg p-4 sm:p-5 bg-canvas space-y-3">
           <div className="flex items-center gap-2 text-xs font-bold text-ink-dark uppercase tracking-wider">
             <Link2 className="h-4 w-4 text-cobalt" />
             Extracted Embedded Web Addresses ({currentResult.extractedUrls.length})
@@ -72,7 +72,7 @@ export const ResultsPage: React.FC = () => {
             {currentResult.extractedUrls.map((url, i) => (
               <div
                 key={i}
-                className="bg-surface-1 border border-hairline rounded px-3 py-2 text-sm font-mono text-ink-dark overflow-x-auto select-all"
+                className="bg-surface-1 border border-hairline rounded px-3 py-2 text-xs sm:text-sm font-mono text-ink-dark overflow-x-auto select-all break-all"
               >
                 {url}
               </div>
@@ -86,11 +86,11 @@ export const ResultsPage: React.FC = () => {
 
       {/* Findings Breakdown */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
           <h3 className="font-bold text-lg text-ink-primary">
             Triggered Heuristic Indicators ({currentResult.findings.length})
           </h3>
-          <span className="text-sm text-ink-secondary">
+          <span className="text-xs sm:text-sm text-ink-secondary">
             Context multiplier applied: {currentResult.contextMultiplier}x
           </span>
         </div>

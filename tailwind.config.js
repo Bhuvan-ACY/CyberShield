@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,29 +9,29 @@ export default {
     extend: {
       colors: {
         ink: {
-          dark: '#0a0a0a',
-          primary: '#222222',
-          mid: '#282b3b',
-          muted: '#444444',
-          secondary: '#4b5563',
-          tertiary: '#71767b',
-          faint: '#909090',
+          dark: 'var(--color-ink-dark)',
+          primary: 'var(--color-ink-primary)',
+          mid: 'var(--color-ink-mid)',
+          muted: 'var(--color-ink-muted)',
+          secondary: 'var(--color-ink-secondary)',
+          tertiary: 'var(--color-ink-tertiary)',
+          faint: 'var(--color-ink-faint)',
         },
-        canvas: '#ffffff',
+        canvas: 'var(--color-canvas)',
         surface: {
-          1: '#e8e8e8',
-          muted: '#808080',
-          dark: '#333333',
+          1: 'var(--color-surface-1)',
+          muted: 'var(--color-surface-muted)',
+          dark: 'var(--color-surface-dark)',
         },
-        hairline: '#cfd9de',
+        hairline: 'var(--color-hairline)',
         cobalt: {
-          DEFAULT: '#006be6',
-          light: '#3e7ff0',
+          DEFAULT: 'var(--color-cobalt)',
+          light: 'var(--color-cobalt-light)',
         },
         error: {
-          DEFAULT: '#ba1a1a',
-          container: '#ffdad6',
-          on: '#93000a',
+          DEFAULT: 'var(--color-error)',
+          container: 'var(--color-error-container)',
+          on: 'var(--color-error-on)',
         },
         severity: {
           low: '#16a34a',
@@ -74,6 +75,11 @@ export default {
         flat: 'none',
         halo: '0 1px 2px 0 rgba(0, 0, 0, 0.04)',
         modal: '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 20px 25px -5px rgba(0, 0, 0, 0.05)',
+      },
+      zIndex: {
+        sticky: '50',
+        modal: '100',
+        popover: '60',
       },
     },
   },

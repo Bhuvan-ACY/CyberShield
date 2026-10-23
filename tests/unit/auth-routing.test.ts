@@ -7,9 +7,10 @@ describe('Supabase Client Configuration', () => {
     expect(supabase).not.toBeNull();
   });
 
-  it('provides official auth API methods (signInWithPassword, signUp, signOut, resetPasswordForEmail)', () => {
+  it('provides official auth API methods (signInWithPassword, signInWithOAuth, signUp, signOut, resetPasswordForEmail)', () => {
     expect(supabase?.auth).toBeDefined();
     expect(typeof supabase?.auth.signInWithPassword).toBe('function');
+    expect(typeof supabase?.auth.signInWithOAuth).toBe('function');
     expect(typeof supabase?.auth.signUp).toBe('function');
     expect(typeof supabase?.auth.signOut).toBe('function');
     expect(typeof supabase?.auth.resetPasswordForEmail).toBe('function');

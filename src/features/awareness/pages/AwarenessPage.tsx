@@ -71,7 +71,7 @@ export const AwarenessPage: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors select-none ${
+              className={`px-3 py-2 rounded-lg text-xs font-medium border transition-colors select-none min-h-[38px] ${
                 selectedCategory === cat.id
                   ? 'bg-ink-dark text-canvas border-ink-dark'
                   : 'bg-canvas text-ink-muted border-hairline hover:bg-surface-1 hover:text-ink-primary'

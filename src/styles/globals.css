@@ -28,10 +28,37 @@
     --radius-dominant: 8px;
   }
 
+  .dark {
+    --color-ink-dark: #f8fafc;
+    --color-ink-primary: #f1f5f9;
+    --color-ink-mid: #e2e8f0;
+    --color-ink-muted: #94a3b8;
+    --color-ink-secondary: #94a3b8;
+    --color-ink-tertiary: #64748b;
+    --color-ink-faint: #64748b;
+
+    --color-canvas: #000000;
+    --color-surface-1: #111111;
+    --color-surface-muted: #1a1a1a;
+    --color-surface-dark: #262626;
+    --color-hairline: #222222;
+
+    --color-cobalt: #38bdf8;
+    --color-cobalt-light: #60a5fa;
+
+    --color-error: #f87171;
+    --color-error-container: #450a0a;
+    --color-error-on: #fecaca;
+  }
+
   html {
     font-size: 17px;
     color-scheme: light;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   @media (min-width: 1280px) {
@@ -47,6 +74,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   /* Lenis smooth scroll recommended styles */
@@ -73,17 +101,18 @@
 
 /* Planar borders and code styling per design system */
 .border-hairline {
-  border-color: #cfd9de;
+  border-color: var(--color-hairline);
 }
 
 .code-chip {
   font-family: 'JetBrains Mono', Menlo, ui-monospace, SFMono-Regular, Monaco, Consolas, 'Liberation Mono', monospace;
   font-size: 0.75rem;
   font-weight: 600;
-  background-color: #e8e8e8;
-  color: #0a0a0a;
+  background-color: var(--color-surface-1);
+  color: var(--color-ink-dark);
   padding: 2.5px 7px;
   border-radius: 4px;
   display: inline-block;
   letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }

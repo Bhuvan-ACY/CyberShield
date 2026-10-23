@@ -71,11 +71,13 @@ export const HomePage: React.FC = () => {
     <div className="space-y-16 py-4">
       {/* Hero Section */}
       <section className="text-center max-w-3xl mx-auto space-y-6 pt-4 sm:pt-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-1 border border-hairline text-xs font-semibold text-ink-primary shadow-flat">
-          <Shield className="h-3.5 w-3.5 text-ink-dark" />
-          <span>CYBERSHIELD ENHANCED MVP</span>
-          <span className="text-ink-faint">|</span>
-          <span className="text-emerald-700 font-medium">100% Client-Side In-Memory Engine</span>
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-1 border border-hairline text-xs font-semibold text-ink-primary shadow-flat max-w-full">
+          <div className="flex items-center gap-1.5">
+            <Shield className="h-3.5 w-3.5 text-ink-dark" />
+            <span>CYBERSHIELD ENHANCED MVP</span>
+          </div>
+          <span className="hidden sm:inline text-ink-faint">|</span>
+          <span className="text-emerald-700 dark:text-emerald-400 font-medium">100% Client-Side In-Memory Engine</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-ink-dark leading-tight">
@@ -94,9 +96,9 @@ export const HomePage: React.FC = () => {
               value={quickInput}
               onChange={(e) => setQuickInput(e.target.value)}
               placeholder="Paste suspicious SMS, link, or extortion threat..."
-              className="flex-1 px-3 py-2.5 text-base text-ink-primary focus:outline-none placeholder:text-ink-faint"
+              className="flex-1 px-3 py-2.5 text-base text-ink-primary bg-transparent focus:outline-none placeholder:text-ink-faint"
             />
-            <Button type="submit" variant="primary" size="md" className="shrink-0 text-sm font-semibold">
+            <Button type="submit" variant="primary" size="md" className="shrink-0 text-sm font-semibold min-h-[44px]">
               <Search className="h-4 w-4" />
               Triage Now
             </Button>
@@ -104,19 +106,19 @@ export const HomePage: React.FC = () => {
         </form>
 
         {/* Direct Action Links */}
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <Link to="/app/analyze">
-            <Button variant="outline" size="md" className="text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 pt-2">
+          <Link to="/app/analyze" className="w-full sm:w-auto">
+            <Button variant="outline" size="md" className="w-full sm:w-auto text-sm min-h-[44px]">
               Advanced Multi-Tab Analyzer
             </Button>
           </Link>
-          <Link to="/app/training">
-            <Button variant="outline" size="md" className="text-sm">
+          <Link to="/app/training" className="w-full sm:w-auto">
+            <Button variant="outline" size="md" className="w-full sm:w-auto text-sm min-h-[44px]">
               Practice Scam Simulator
             </Button>
           </Link>
-          <Link to="/app/safety-guide">
-            <Button variant="secondary" size="md" className="text-error font-semibold text-sm">
+          <Link to="/app/safety-guide" className="w-full sm:w-auto">
+            <Button variant="secondary" size="md" className="w-full sm:w-auto text-error font-semibold text-sm min-h-[44px]">
               <PhoneCall className="h-4 w-4" />
               1930 Emergency Guide
             </Button>
@@ -126,21 +128,21 @@ export const HomePage: React.FC = () => {
 
       {/* High-Priority Active Alert Banner */}
       <section className="max-w-4xl mx-auto">
-        <div className="border border-amber-300 bg-amber-50/60 rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="border border-amber-300 dark:border-amber-800 bg-amber-50/60 dark:bg-amber-950/30 rounded-lg p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-start gap-3.5">
-            <AlertTriangle className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
+            <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <h4 className="text-sm font-bold text-amber-950 uppercase tracking-wider">
+              <h4 className="text-sm font-bold text-amber-950 dark:text-amber-200 uppercase tracking-wider">
                 Active Citizen Scam Alert: Fake Police & CBI Video Calls
               </h4>
-              <p className="text-sm text-amber-900 leading-relaxed">
+              <p className="text-sm text-amber-900 dark:text-amber-300/90 leading-relaxed">
                 Extortionists are impersonating Indian law enforcement over WhatsApp/Skype video calls alleging narcotics parcels. Real police never issue warrants or hold video trials.
               </p>
             </div>
           </div>
 
           <Link to="/app/awareness" className="shrink-0">
-            <Button variant="outline" size="sm" className="bg-canvas border-amber-300 text-sm font-semibold">
+            <Button variant="outline" size="sm" className="bg-canvas border-amber-300 dark:border-amber-700 text-sm font-semibold">
               Read Advisory
             </Button>
           </Link>

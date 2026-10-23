@@ -23,6 +23,9 @@ const ForgotPasswordPage = React.lazy(() =>
 const AuthCallbackPage = React.lazy(() =>
   import('@/features/auth/pages/AuthCallbackPage').then((m) => ({ default: m.AuthCallbackPage }))
 );
+const SignoutPage = React.lazy(() =>
+  import('@/features/auth/pages/SignoutPage').then((m) => ({ default: m.SignoutPage }))
+);
 
 // Protected Core Application Pages
 const HomePage = React.lazy(() =>
@@ -87,8 +90,9 @@ export const AppRoutes: React.FC = () => {
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
           </Route>
 
-          {/* 3. Auth Callback (Handles Supabase email verification / OAuth redirects) */}
+          {/* 3. Auth Callback & Signout Flows */}
           <Route path="auth/callback" element={<AuthCallbackPage />} />
+          <Route path="signout" element={<SignoutPage />} />
 
           {/* 4. Protected Authenticated Application (/app/*) */}
           <Route path="app" element={<ProtectedRoute />}>
