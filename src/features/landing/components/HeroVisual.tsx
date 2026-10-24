@@ -90,7 +90,7 @@ export const HeroVisual: React.FC = () => {
           <div className="relative rounded-xl border border-hairline bg-surface-1/40 p-4 sm:p-5 space-y-3">
             <p className="text-sm sm:text-base text-ink-primary leading-relaxed font-sans">
               "Dear Citizen, Your electricity connection power will be{' '}
-              <span className="bg-red-500/20 text-red-700 dark:text-red-300 font-semibold px-1 rounded underline decoration-red-500 decoration-wavy">
+              <span className="bg-red-500/20 text-red-700 dark:text-red-300 font-semibold px-1 rounded">
                 disconnected tonight at 9:30 PM
               </span>{' '}
               from power office due to pending KYC bill.{' '}
